@@ -1,0 +1,4 @@
+*.cached
+*.map
+.npm
+.idea

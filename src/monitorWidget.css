@@ -1,0 +1,73 @@
+.monitorWidgetWrapper {
+    cursor: move;
+}
+
+.monitorWidget {
+    padding: 0 3px 3px 3px;
+    text-align: left;
+    border-radius: 11px;
+    border: 5px solid;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    box-shadow: 5px 3px 15px #888888;
+}
+
+.monitorWidgetHeader {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 12px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.monitorWidgetHeaderTopRowCell {
+    width: 33.3%;
+    float: left;
+}
+
+.monitorWidgetHeaderBottomRowCell {
+    width: 50%;
+    float: left;
+}
+
+.monitorWidgetGraph {
+    border: 1px solid white;
+    display: flex;
+    width: 120px;
+    height: 30px;
+}
+
+.monitorWidgetGraphElement {
+    position: absolute;
+    opacity: 0.8;
+}
+
+.monitorWidgetBackgroundColor {
+    background: #002;
+}
+
+.monitorWidgetHeaderTextColor {
+    color: #0ff;
+}
+
+.monitorWidgetFirstDataSourceColor {
+    background-color: #0f0;
+}
+
+.monitorWidgetSecondDataSourceColor {
+    background-color: #f08;
+}
+
+.monitorWidgetFirstDataSourceHeaderColor {
+    color: #0f0;
+}
+
+.monitorWidgetSecondDataSourceHeaderColor {
+    color: #f08;
+}
+
+.monitorWidgetGraphBackgroundColor {
+    background: #002;
+}

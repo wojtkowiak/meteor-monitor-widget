@@ -1,0 +1,23 @@
+<template name="monitorWidget">
+    <div class="{{class}} monitorWidgetWrapper">
+        <div class="monitorWidget monitorWidgetBackgroundColor" style="margin-top: {{topMargin}}px">
+            <div class="monitorWidgetHeader monitorWidgetHeaderTextColor">
+                <div>
+                    <div style="text-align: left;" class="monitorWidgetHeaderTopRowCell">{{firstChartName}}</div>
+                    <div style="text-align: center;" class="monitorWidgetHeaderTopRowCell">{{widgetName}}</div>
+                    <div style="text-align: right;" class="monitorWidgetHeaderTopRowCell">{{secondChartName}}</div>
+                </div>
+
+                {{#with firstValue=firstDataSource secondValue=secondDataSource units=units}}
+                    <div class="monitorWidgetHeaderBottomRowCell monitorWidgetFirstDataSourceHeaderColor"
+                         style="text-align: left;">{{firstValue}} {{units}}</div>
+                    <div class="monitorWidgetHeaderBottomRowCell monitorWidgetSecondDataSourceHeaderColor"
+                         style="text-align: right;">{{secondValue}} {{units}}</div>
+                    {{updateGraph}}
+                {{/with}}
+            </div>
+            <div class="monitorWidgetGraph monitorWidgetGraphBackgroundColor" style="{{#if graphWidth}}width: {{graphWidth}}px;{{/if}}"></div>
+        </div>
+    </div>
+</template>
+
