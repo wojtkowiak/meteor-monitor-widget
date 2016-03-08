@@ -1,6 +1,6 @@
 # Meteor Monitor Widget
 
-[[https://github.com/wojtkowiak/meteor-monitor-widget/blob/master/widget.png]]
+![Widgets screenshot](https://github.com/wojtkowiak/meteor-monitor-widget/blob/master/widget.png)
 
 Tiny draggable little widget with chart, made for the purpose of quick overview of some key app metrics.
 This was made for a concrete use case of monitoring transfer rate but I think it might be easily used for other metrics like online users count etc.
