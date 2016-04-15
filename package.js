@@ -7,9 +7,9 @@ Package.describe({
 });
 
 Package.onUse(function monitorWidgetOnUse(api) {
-    api.versionsFrom('1.1.0.3');
+    api.versionsFrom('METEOR@1.2');
     api.use(['templating', 'ecmascript'], 'client');
-    api.use('dbernhard:jquery-ui-draggable', 'client');
+    api.use('dbernhard:jquery-ui-draggable@0.1.2', 'client');
     api.addFiles([
         'src/monitorWidget.css',
         'src/monitorWidget.html',
