@@ -1,7 +1,7 @@
 Package.describe({
     name: 'omega:monitor-widget',
     version: '0.1.0',
-    summary: 'Tiny draggable graph for representing some basic app metrics.',
+    summary: 'Tiny draggable graph for presenting some basic app metrics.',
     git: 'https://github.com/wojtkowiak/meteor-monitor-widget',
     documentation: 'README.md'
 });

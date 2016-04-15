@@ -5,6 +5,12 @@ const templateInstanceToClassInstanceMap = new WeakMap();
  */
 class MonitorWidget {
 
+    /**
+     * Constructor for this widget class. Every template instance must have a separate instance of this class.
+     *
+     * @param {Template} templateInstance - Reference to the template instance.
+     * @param {Element}  graphElement     - Reference to the html element that holds the graph.
+     */
     constructor(templateInstance, graphElement) {
         _.extend(this, {
             graphElements: [],
@@ -16,7 +22,7 @@ class MonitorWidget {
             dataSetCount: 0,
             minScale: templateInstance.data.minScale ? templateInstance.data.minScale : 0
         });
-console.log(templateInstance.graphHistoryCount(), templateInstance.graphWidth());
+
         this.elementsWidth = this.graphWidth / this.dataSetMaxCount;
         this.elementsCount = this.graphWidth / this.elementsWidth;
 
@@ -33,7 +39,7 @@ console.log(templateInstance.graphHistoryCount(), templateInstance.graphWidth())
     /**
      * Create the elements in the graph that will represent values.
      *
-     * @param {int} dataSetId Data set id.
+     * @param {number} dataSetId Data set id.
      */
     addGraphDataSetElements(dataSetId) {
         const position = dataSetId === 0 ? 'bottom: 4px' : 'top: 25px';
@@ -54,7 +60,7 @@ console.log(templateInstance.graphHistoryCount(), templateInstance.graphWidth())
     /**
      * Initializes arrays for data set.
      *
-     * @param {int} dataSetId Data set id.
+     * @param {number} dataSetId Data set id.
      */
     initDataSet(dataSetId) {
         this.dataSets[dataSetId] = [];
@@ -80,10 +86,10 @@ console.log(templateInstance.graphHistoryCount(), templateInstance.graphWidth())
     /**
      * Updates single html graph element.
      *
-     * @param {int} dataSetId Data set id.
-     * @param {*} value Value of the element.
-     * @param {int} id Id of the element.
-     * @param {int} max Max value of the current graph.
+     * @param {number} dataSetId - Data set id.
+     * @param {*}      value     - Value of the element.
+     * @param {number} id        - Id of the element.
+     * @param {number} max       - Max value of the current graph.
      */
     updateGraphElement(dataSetId, value, id, max) {
         const height = Math.round((value / max * 30) / this.dataSetCount) + 'px';
@@ -95,7 +101,7 @@ console.log(templateInstance.graphHistoryCount(), templateInstance.graphWidth())
     /**
      * Puts new values in the graph history.
      *
-     * @param {Array} values Reactively changed values of data sets. These should come from the template.
+     * @param {Array} values - Reactively changed values of data sets. These should come from the template.
      */
     updateValues(...values) {
         if (this.dataSets.length === 0) return;
