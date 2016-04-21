@@ -22,7 +22,7 @@ modules@0.5.2
 modules-runtime@0.6.2
 mongo-id@1.0.3
 observe-sequence@1.0.10
-omega:monitor-widget@0.1.0
+omega:monitor-widget@0.1.1
 promise@0.6.6
 random@1.0.8
 reactive-var@1.0.8
